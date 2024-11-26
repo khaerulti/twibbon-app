@@ -1,0 +1,194 @@
+/* Mengatur semua elemen untuk menggunakan box-sizing border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Mengatur body agar elemen berada di tengah layar secara vertikal dan horizontal */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Kontainer utama dengan padding, warna latar belakang, dan border radius */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 600px;
+  max-width: 90%;
+  
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk judul aplikasi */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Bagian untuk upload gambar utama dan twibbon */
+.upload-section {
+  margin: 20px 0;
+}
+
+.upload-section label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: inline-block;
+  color: #555;
+}
+
+/* Styling untuk input file */
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Mengatur kontrol slider untuk posisi dan zoom */
+.controls {
+  margin-top: 30px;
+}
+
+.controls div {
+  margin-bottom: 20px;
+}
+
+.controls label {
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="range"] {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Styling untuk tombol unduh */
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Canvas untuk menampilkan hasil gabungan gambar */
+canvas {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer yang berada di dalam container */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  position: relative; /* Menggunakan relative agar footer tetap berada di dalam container */
+}
+
+/* Styling untuk link di footer (jika ada) */
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries untuk responsif */
+
+/* Untuk perangkat dengan lebar maksimal 768px (tablet) */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  input[type="file"], input[type="range"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  canvas {
+    height: auto;
+  }
+}
+
+/* Untuk perangkat dengan lebar maksimal 480px (smartphone) */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  input[type="file"], input[type="range"] {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  canvas {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
